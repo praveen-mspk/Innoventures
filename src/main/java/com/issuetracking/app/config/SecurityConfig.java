@@ -13,12 +13,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable()) // Testing-kaga CSRF disable panrom
+            .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/users/**").permitAll() // Swagger matrum User API-ku permission
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/users/**").permitAll() 
                 .anyRequest().authenticated()
             )
-            .formLogin(form -> form.permitAll()); // Login page venum na vachikalaam
+            .formLogin(form -> form.permitAll()); 
         
         return http.build();
     }
