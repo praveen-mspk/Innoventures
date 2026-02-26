@@ -30,6 +30,9 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @NotBlank(message = "Password is required")
+    private String password;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
