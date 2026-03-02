@@ -1,11 +1,10 @@
 package com.issuetracking.app.service;
 
+import com.issuetracking.app.dto.IssueStatusRequestDTO;
 import com.issuetracking.app.entity.Issue;
-import java.util.List;
 
 public interface IssueService {
 
-    Issue createIssue(Issue issue);
+    Issue updateIssueStatus(Long issueId, IssueStatusRequestDTO request);
 
-    List<Issue> getAllIssues();
 }

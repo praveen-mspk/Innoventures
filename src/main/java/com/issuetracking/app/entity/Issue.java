@@ -36,6 +36,9 @@ public class Issue {
     @ManyToOne
     @JoinColumn(name = "created_by_user_id")
     private User createdBy;
+    @ManyToOne
+    @JoinColumn(name = "assignee_user_id")
+    private User assignee;
 
     @CreationTimestamp
     @Column(updatable = false)
